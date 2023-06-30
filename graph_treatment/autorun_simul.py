@@ -63,6 +63,76 @@ def run_simul_once(
         
         np.savetxt( f"{result_file}_{i}_fluxmean", np.array([n]))
 
+def run_simul_once_flux(
+    nb_threads, path_graph,
+    coeff_wk, nb_it,
+    sim_opt, trace_name,
+    trace_num, result_file, 
+    nb_it_flux
+):
+    """
+    bunch of simul args -> simul_file
+    
+    variant of run_simul_once to only calculate the 
+    correct version of flux mean
+    function was improved by https://github.com/Pacidus
+    """
+
+    # start simulation
+    sb.run(
+        f'bash batch_launch.sh "{nb_threads}" "{path_graph}" "{coeff_wk}" "{nb_it}" "{sim_opt}" \
+        "{trace_name}{str(trace_num)}" "{nb_it_flux}"',
+        shell=True,
+    )
+
+    # loads the trace
+    nb_wk, nb_lines = lt.load_nbwk_nblines(path_graph)
+    for i in range(nb_threads):
+        #dassit
+        tr_comp_name = f"{trace_name}{trace_num}{i}"
+        t_flux = lt.load_trace_elem(tr_comp_name+"_flux", nb_it - nb_it_flux )
+        lines = lt.load_line_trace(tr_comp_name+"_lines", nb_lines)
+        lt.clean_var(tr_comp_name)
+        
+        n = dt.mean_flux_correct( lines, t_flux,nb_wk )
+        del(t_flux , lines)
+        
+        np.savetxt( f"{result_file}_{i}_fluxmean", np.array([n]))
+
+
+def run_simul_nth_flux(
+    num, nb_threads, path_graph, coeff_wk,
+    nb_it, simul_opt, trace_name, result_file, 
+    nb_it_flux
+):
+    """
+    runs a bunch of simul w given parameters
+    and calculates their mean result
+    
+    function was improved by https://github.com/Pacidus
+    """
+    N = num // nb_threads
+    n = num % nb_threads
+
+    for i in range(N):
+        run_simul_once_flux(
+            nb_threads, path_graph,
+            coeff_wk, nb_it,
+            simul_opt, trace_name,
+            i, f"{result_file}_{i * nb_threads}",
+            nb_it_flux
+        )
+    run_simul_once_flux(
+        n, path_graph,
+        coeff_wk, nb_it,
+        simul_opt, trace_name,
+        N, f"{result_file}_{N * nb_threads}",
+        nb_it_flux
+    )
+    print("simulation are done running; starting data analysis")
+
+
+
 
 def run_simul_nth(
     num, nb_threads, path_graph, coeff_wk,
@@ -118,7 +188,7 @@ def main():
     )
     parser.add_argument(
         "radius", metavar="radius", type=int, nargs=1,
-        help="floating point number corresponding \
+        help="floating point number corre                                      sponding \
         to the radius (in meters) of a circle around \
         a geograpgical point used to generate a graph",
     )
@@ -128,7 +198,7 @@ def main():
         graph",
     )
     parser.add_argument(
-        "path", metavar="path", type=str, nargs=1,
+        "path", metavar="path", type=str,                                       nargs=1,
         help="the path of the file where the csv rep \
         of the graph will be stored",
     )
@@ -141,7 +211,7 @@ def main():
         "simul_tot", metavar="simul_tot", type=int,
         nargs=1, help="number of simuls per batch",
     )
-    parser.add_argument(
+    parser.add_argument(                                      
         "nb_thread_max", metavar="max_thread", type=int,
         nargs=1, help="number of threads used per batch",
     )

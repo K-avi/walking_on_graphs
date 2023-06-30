@@ -94,7 +94,7 @@ int main(int argc , char ** argv){
     srand(timer);
 
     //init tactics
-    uint8_t prop_flag = 0 ;
+    uint8_t prop_flag = 1 ;
     Tactics tactics; 
     uint8_t failure= initTactics(&tactics, DEFAULT_CAPA_TACTICS);
     if(failure) {report_err("in main loadGraphTab call", failure); exit(failure);}
@@ -108,7 +108,6 @@ int main(int argc , char ** argv){
         failure = parse_args(&tactics, 0, NULL, &prop_flag);
          if(failure){ report_err("in main parse args 2 call", failure); exit(failure);}
     }
-
 
     //init graph 
     GraphTable gtable; 
@@ -124,6 +123,8 @@ int main(int argc , char ** argv){
         failure = load_warray(&gtable, warray_name);
         if(failure){report_err("in main load_warray call", failure); exit(failure);}       
     }
+
+   
 
     if(!dumpset){
         failure=iterate_ntimes(&gtable, &tactics, iteration_num);

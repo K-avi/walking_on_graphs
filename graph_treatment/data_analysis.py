@@ -99,6 +99,27 @@ def mean_results(simul_name, res_name):
         np.savetxt(res_name, ret_mat)
     if flux_mean:
         np.savetxt(res_name+"fluxmean",[mean(flux_mean)])
+        
+
+def mean_results_flux(simul_name, res_name):
+    """
+    str, str -> writes file
+
+    variant of mean resutl used to calculate the correct flux
+    
+    function was improved by https://github.com/Pacidus
+    """
+    ret_mat = np.array([])
+    flux_mean = []
+    n = 0
+    for fname in os.listdir("."):
+        
+        if "_fluxmean" in fname:
+            flux_mean += [(np.loadtxt(fname)).item()]
+                
+
+    if flux_mean:
+        np.savetxt(res_name+"fluxmean_corr",[mean(flux_mean)])
 
 
 
@@ -194,6 +215,38 @@ def mean_flux( lines, flux_mat, nb_wk ):
     s =  np.abs(flux_mat[:,Idab] - flux_mat[:,Idba]).sum(1).mean() 
         
     return s/(nb_wk)
+
+def mean_flux_correct( lines, flux_mat, nb_wk ): 
+    """
+    np.array[1D] , np.array[2D] , int -> int 
+    
+    the previous one didn't do the right calculation ; 
+    I'll rerun simuls with this one instead (oops I guess)
+    """
+    s = 0
+    N = len(lines)
+    Idab, Idba = np.zeros((2, N//2), dtype=np.int32)
+    Dab = dict()
+    m,n = np.shape(flux_mat)
+    flux_arr = sum(flux_mat)
+    itt = 0
+    for i, (a, b) in enumerate(lines):
+        ba = b < a
+        if ba:
+            a, b = b, a
+        if (a, b) not in Dab:
+            Dab[(a,b)] = itt
+            itt += 1
+        if ba:
+            
+            Idba[Dab[(a,b)]] = int(i)
+        else:
+            Idab[Dab[(a,b)]] = int(i) 
+    
+    nb_not_zer = np.nonzero( np.array(flux_arr[Idab]+ np.array(flux_arr[Idba])))
+    s =  sum((np.abs(flux_arr[Idab] - flux_arr[Idba])))
+    print( s/(nb_wk*m))
+    return s/(nb_wk*m)
 
 def main():
     """

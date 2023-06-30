@@ -51,7 +51,7 @@ uint8_t choose_node( Tactics * t, GraphTable* gtable, uint32_t node_from, uint32
 
 
 uint8_t rule_rand( GraphTable * gtable , uint32_t node_from, uint32_t walker_index);
-uint8_t addRule( Tactics * t , uint8_t rule_coeff, rule_fun);
+uint8_t addRule( Tactics * t , uint16_t rule_coeff, rule_fun);
 
 #endif
 
