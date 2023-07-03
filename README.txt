@@ -1,4 +1,6 @@
-
+This branch is the branch with the code I use when running 
+simulations on server. It is slightly different from the 
+one I use locally. 
 This repo contains the code written during my internship at the Lip6 lab. 
 
 The goals of my internship are: 

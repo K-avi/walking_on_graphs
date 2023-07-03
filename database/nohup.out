@@ -1,303 +1,1765 @@
 
-warning : sum of coefficients of arguments is 0; first argument set to 1
- at parse_rule_coeff
-warning : sum of coefficients of arguments is 0; first argument set to 1
- at parse_rule_coeff
-warning : sum of coefficients of arguments is 0; first argument set to 1
- at parse_rule_coeff
-warning : sum of coefficients of arguments is 0; first argument set to 1
- at parse_rule_coeff
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:0.0
- 
-0.12695906432748538
-0.12688639073411684
-0.12688639073411684
-0.12695111565321068
+simul running with par :
+rand:10.0 attra:0.0 align:0.0 propu:0.0
+0.12329980676807215
+0.12329980676807215
+0.12336454772167996
+0.12336454772167996
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:1.0
- 
-0.2548299551467666
-0.2549105774144098
-0.2549105774144098
-0.2570095951853744
+simul running with par :
+rand:0.0 attra:0.0 align:10.0 propu:0.0
+0.977694098994203
+0.9714294207996829
+0.9714294207996829
+0.9858052156104973
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:2.0
- 
-0.25437574518821326
-0.25437574518821326
-0.2548640208936581
-0.2548640208936581
+simul running with par :
+rand:0.0 attra:0.0 align:0.0 propu:10.0
+0.2505564088589407
+0.2505564088589407
+0.2509124841037837
+0.2509124841037837
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:3.0
- 
-0.2534764094702776
-0.2534764094702776
-0.25604723783568956
-0.25604723783568956
+simul running with par :
+rand:0.0 attra:10.0 align:0.0 propu:0.0
+7.266841731490198e-06
+7.266841731490198e-06
+8.588085682670235e-06
+8.588085682670235e-06
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:4.0
- 
-0.2542406177255436
-0.25460114688014535
-0.25460114688014535
-0.25547663657525693
+simul running with par :
+rand:0.0 attra:9.0 align:0.0 propu:1.0
+0.022484268939206263
+0.022639515103469916
+0.022639515103469916
+0.022429767626220086
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:5.0
- 
-0.25432123999318684
-0.25432123999318684
-0.2536632033157327
-0.2536632033157327
+simul running with par :
+rand:0.0 attra:9.0 align:1.0 propu:0.0
+0.014568696427686666
+0.014462996911592264
+0.014462996911592264
+0.01469619646897554
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:6.0
- 
-0.2569601998523818
-0.2552705388065633
-0.2552705388065633
-0.25384375177425766
+simul running with par :
+rand:9.0 attra:0.0 align:1.0 propu:0.0
+0.13427042560570776
+0.13427042560570776
+0.13335249137062544
+0.13335249137062544
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:7.0
- 
-0.25477204337705106
-0.25420030659172205
-0.25420030659172205
-0.2563827854425708
+simul running with par :
+rand:0.0 attra:0.0 align:1.0 propu:9.0
+0.417898891806636
+0.417898891806636
+0.4177363788006408
+0.4177363788006408
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:8.0
- 
-0.25615511270084595
-0.2555600976551411
-0.2555600976551411
-0.2547425197297451
+simul running with par :
+rand:9.0 attra:1.0 align:0.0 propu:0.0
+0.1227792366513072
+0.1227792366513072
+0.12312011759071166
+0.12312011759071166
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:9.0
- 
-0.25535797422358486
-0.25351047521716913
-0.25351047521716913
-0.2540850508147391
+simul running with par :
+rand:0.0 attra:1.0 align:9.0 propu:0.0
+0.8477847693603527
+0.8560557564947398
+0.8560557564947398
+0.8624598259261095
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:0.0 propu:10.0
- 
-0.2532476012036564
-0.25530403679100666
-0.25530403679100666
-0.2540288423323681
+simul running with par :
+rand:0.0 attra:1.0 align:0.0 propu:9.0
+0.22983864308246213
+0.22983864308246213
+0.23122165518835985
+0.23122165518835985
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:0.0
- 
-0.9927269630386646
-0.9927269630386646
-0.9932799636632034
-0.9932799636632034
+simul running with par :
+rand:1.0 attra:0.0 align:9.0 propu:0.0
+0.8586004723447126
+0.8564911063766536
+0.8564911063766536
+0.860900758063717
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:1.0
- 
-0.7976767160619996
-0.7993175495372736
-0.7993175495372736
-0.797819792198944
+simul running with par :
+rand:9.0 attra:0.0 align:0.0 propu:1.0
+0.13032816396637434
+0.13082594262498143
+0.13082594262498143
+0.1305560785479529
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:2.0
- 
-0.6549730312837109
-0.6549730312837109
-0.6565621983761994
-0.6565621983761994
+simul running with par :
+rand:0.0 attra:0.0 align:9.0 propu:1.0
+0.9645163421361211
+0.9666138169086195
+0.9666138169086195
+0.9640453186675255
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:3.0
- 
-0.5750911258729348
-0.5750911258729348
-0.5767166297621076
-0.5767166297621076
+simul running with par :
+rand:1.0 attra:9.0 align:0.0 propu:0.0
+0.014521131645444186
+0.014556144610150456
+0.014556144610150456
+0.01468100216353697
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:4.0
- 
-0.5188105376710385
-0.5175631635723613
-0.5175631635723613
-0.516875035485153
+simul running with par :
+rand:1.0 attra:0.0 align:0.0 propu:9.0
+0.22466960643445805
+0.22466960643445805
+0.22521164676542965
+0.22521164676542965
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:5.0
- 
-0.4799647987282121
-0.4799647987282121
-0.48067223073865895
-0.48067223073865895
+simul running with par :
+rand:2.0 attra:0.0 align:0.0 propu:8.0
+0.20505838246709276
+0.20416621248905845
+0.20416621248905845
+0.20605823382714827
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:6.0
- 
-0.4520990177709646
-0.4502651450633055
-0.4502651450633055
-0.44745301765741213
+simul running with par :
+rand:2.0 attra:8.0 align:0.0 propu:0.0
+0.024127235792498637
+0.024127235792498637
+0.024077028522353796
+0.024077028522353796
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:7.0
- 
-0.42954522227899844
-0.4298291035030943
-0.4298291035030943
-0.43091125872934766
+simul running with par :
+rand:8.0 attra:0.0 align:0.0 propu:2.0
+0.13740408594691902
+0.1380676807213992
+0.1380676807213992
+0.1376438917240582
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:8.0
- 
-0.4125441435303469
-0.41055470391188326
-0.41055470391188326
-0.4098506784761256
+simul running with par :
+rand:0.0 attra:0.0 align:2.0 propu:8.0
+0.5459991081603329
+0.5459991081603329
+0.5476665180267222
+0.5476665180267222
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:1.0 propu:9.0
- 
-0.4001368307500142
-0.3985238176347016
-0.3985238176347016
-0.3978044626128428
+simul running with par :
+rand:8.0 attra:0.0 align:2.0 propu:0.0
+0.14843085765247982
+0.1480803976944293
+0.1480803976944293
+0.14809658293283126
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:0.0
- 
-0.9934020325895645
-0.9934020325895645
-0.9947232158065066
-0.9947232158065066
+simul running with par :
+rand:0.0 attra:0.0 align:8.0 propu:2.0
+0.947067333894862
+0.947067333894862
+0.9459792895010652
+0.9459792895010652
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:1.0
- 
-0.8939817180491683
-0.8910685289274968
-0.8910685289274968
-0.8960364503491739
+simul running with par :
+rand:2.0 attra:0.0 align:8.0 propu:0.0
+0.684726089613371
+0.6864351186642224
+0.6864351186642224
+0.6846210507192522
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:2.0
- 
-0.7996661556804633
-0.7990427525123488
-0.7990427525123488
-0.7974246295350026
+simul running with par :
+rand:8.0 attra:2.0 align:0.0 propu:0.0
+0.11515301656509604
+0.1160560868057276
+0.1160560868057276
+0.11545855422880642
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:3.0
- 
-0.7221024243456537
-0.7221024243456537
-0.7212155794015784
-0.7212155794015784
+simul running with par :
+rand:0.0 attra:8.0 align:2.0 propu:0.0
+0.031106706964607177
+0.030350955424532196
+0.030350955424532196
+0.030973921947513583
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:4.0
- 
-0.6564441037869755
-0.6564441037869755
-0.6540680179412933
-0.6540680179412933
+simul running with par :
+rand:0.0 attra:2.0 align:8.0 propu:0.0
+0.7401291515962278
+0.7401291515962278
+0.7455125600753109
+0.7455125600753109
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:5.0
- 
-0.6116203940271391
-0.6081269516834157
-0.6081269516834157
-0.6108170101629479
+simul running with par :
+rand:0.0 attra:8.0 align:0.0 propu:2.0
+0.03687063370163009
+0.036483178912946536
+0.036483178912946536
+0.03685907281705726
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:6.0
- 
-0.5726327144722648
-0.5726327144722648
-0.5771821949696248
-0.5771821949696248
+simul running with par :
+rand:0.0 attra:2.0 align:0.0 propu:8.0
+0.21364316503988506
+0.21364316503988506
+0.21354671423144891
+0.21354671423144891
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:7.0
- 
-0.5437835689547493
-0.5420927723840345
-0.5420927723840345
-0.5433804576165332
+simul running with par :
+rand:0.0 attra:0.0 align:3.0 propu:7.0
+0.6548844737320187
+0.6548844737320187
+0.6545373168838461
+0.6545373168838461
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:2.0 propu:8.0
- 
-0.519875660023846
-0.5180088570941918
-0.5180088570941918
-0.5165485720774428
+simul running with par :
+rand:0.0 attra:3.0 align:7.0 propu:0.0
+0.6416489124510727
+0.6416489124510727
+0.6326803085104626
+0.6326803085104626
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:0.0
- 
-0.9934054391642537
-0.9905995571452905
-0.9905995571452905
-0.9940799409527054
+simul running with par :
+rand:7.0 attra:3.0 align:0.0 propu:0.0
+0.09752894350030554
+0.09752894350030554
+0.0978361327189549
+0.0978361327189549
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:1.0
- 
-0.9291108840061318
-0.9273996479872821
-0.9273996479872821
-0.9305405098506785
+simul running with par :
+rand:0.0 attra:7.0 align:0.0 propu:3.0
+0.05622190292160069
+0.05650960379197014
+0.05650960379197014
+0.056357000115608846
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:2.0
- 
-0.8655254641458014
-0.8591625503889173
-0.8591625503889173
-0.8593499119968205
+simul running with par :
+rand:7.0 attra:0.0 align:0.0 propu:3.0
+0.14601165997786916
+0.14601165997786916
+0.1464859865563428
+0.1464859865563428
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:3.0
- 
-0.7975256912507807
-0.7980349741668086
-0.7980349741668086
-0.7945977403054562
+simul running with par :
+rand:0.0 attra:0.0 align:7.0 propu:3.0
+0.9118548613519629
+0.9118548613519629
+0.9145828998001618
+0.9145828998001618
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:4.0
- 
-0.7428950207233294
-0.7428950207233294
-0.7451921875887129
-0.7451921875887129
+simul running with par :
+rand:3.0 attra:7.0 align:0.0 propu:0.0
+0.033688417645212965
+0.033688417645212965
+0.03305025681679301
+0.03305025681679301
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:5.0
- 
-0.6973241355816726
-0.6973241355816726
-0.6979583262363027
-0.6979583262363027
+simul running with par :
+rand:0.0 attra:7.0 align:3.0 propu:0.0
+0.06353333663644321
+0.06347057754876216
+0.06347057754876216
+0.06408627723001206
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:6.0
- 
-0.6604831658434112
-0.6568971782206325
-0.6568971782206325
-0.6588570941917902
+simul running with par :
+rand:3.0 attra:0.0 align:7.0 propu:0.0
+0.4939582817222415
+0.49537069150605295
+0.49537069150605295
+0.4934687608383293
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:3.0 propu:0.7
- 
-0.9472162607165162
-0.9484114006699597
-0.9484114006699597
-0.949546925566343
+simul running with par :
+rand:7.0 attra:0.0 align:3.0 propu:0.0
+0.16914928405093396
+0.1691136104642521
+0.1691136104642521
+0.16960412228112767
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:4.0 propu:0.0
- 
-0.9921029921081019
-0.9921029921081019
-0.9928393800034065
-0.9928393800034065
+simul running with par :
+rand:3.0 attra:0.0 align:0.0 propu:7.0
+0.18797634973327387
+0.18855009991907382
+0.18855009991907382
+0.18795950387289634
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:4.0 propu:1.0
- 
-0.945536251632317
-0.9464350195878045
-0.9464350195878045
-0.9455697496167603
+simul running with par :
+rand:0.0 attra:3.0 align:0.0 propu:7.0
+0.19397942162546036
+0.19397942162546036
+0.19326859237972552
+0.19326859237972552
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:4.0 propu:2.0
- 
-0.8900312269346505
-0.895281326293079
-0.895281326293079
-0.8935814455231931
+simul running with par :
+rand:0.0 attra:0.0 align:6.0 propu:4.0
+0.8707027366265339
+0.8707027366265339
+0.867932748682885
+0.867932748682885
 simulation are done running; starting data analysis
-simul running with par :rand:0.0 attra:0.0 align:4.0 propu:3.0
- 
-0.8465996706977801
-0.8465996706977801
-0.8463055697496168
-0.8463055697496168
+simul running with par :
+rand:0.0 attra:6.0 align:4.0 propu:0.0
+0.15010850715949067
+0.15010850715949067
+0.14961436192174932
+0.14961436192174932
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:6.0 propu:0.0
+0.3491000677137525
+0.3473378585938661
+0.3473378585938661
+0.3487363953161902
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:0.0 align:4.0 propu:6.0
+0.7388231019504864
+0.7388231019504864
+0.740367305818428
+0.740367305818428
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:6.0 align:0.0 propu:0.0
+0.04378404267617962
+0.044157294092387986
+0.044157294092387986
+0.04398883548861253
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:0.0 propu:6.0
+0.1662732662802028
+0.1662732662802028
+0.1665457728451337
+0.1665457728451337
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:6.0 propu:0.0
+0.4850207270144841
+0.4785268129944343
+0.4785268129944343
+0.48654280004624356
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:0.0 propu:6.0
+0.17545095707608713
+0.17545095707608713
+0.1754929065715371
+0.1754929065715371
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:0.0 align:0.0 propu:4.0
+0.1547110604634263
+0.1547110604634263
+0.15446299691159227
+0.15446299691159227
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:0.0 align:4.0 propu:0.0
+0.2040631554608664
+0.2040631554608664
+0.20285388693454887
+0.20285388693454887
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:6.0 align:0.0 propu:4.0
+0.08590596046177476
+0.08590596046177476
+0.08658805265157145
+0.08658805265157145
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:4.0 align:0.0 propu:0.0
+0.07586714892070885
+0.0761882112008456
+0.0761882112008456
+0.07634345736510925
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:0.0 align:0.0 propu:5.0
+0.16409849873656046
+0.16409849873656046
+0.1648777023567689
+0.1648777023567689
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:0.0 align:5.0 propu:5.0
+0.8146307948933921
+0.8151447587904012
+0.8151447587904012
+0.8105412145535021
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:5.0 align:0.0 propu:0.0
+0.05835075723793952
+0.05835075723793952
+0.05854035574493385
+0.05854035574493385
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:5.0 align:0.0 propu:5.0
+0.1254745743117145
+0.12651075988042743
+0.12651075988042743
+0.12662702934813128
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:5.0 align:5.0 propu:0.0
+0.35883268096913246
+0.3561802837371385
+0.3561802837371385
+0.3565330558721036
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:0.0 align:5.0 propu:0.0
+0.26118812862309865
+0.2608611207451816
+0.2608611207451816
+0.2581796561462617
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:1.0 propu:8.0
+0.2885477877421592
+0.2885477877421592
+0.2890534938644734
+0.2890534938644734
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:8.0 propu:0.0
+0.7336154189169103
+0.731922244793473
+0.731922244793473
+0.7309174387686006
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:8.0 propu:1.0
+0.8316381773439694
+0.8263076186229334
+0.8263076186229334
+0.8298528464549373
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:8.0 align:1.0 propu:0.0
+0.027711770632050076
+0.027711770632050076
+0.02789806602916646
+0.02789806602916646
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:8.0 propu:1.0
+0.8027726304315513
+0.8027726304315513
+0.8040634857718542
+0.8040634857718542
+simulation are done running; starting data analysis
+simul running with par :
+rand:8.0 attra:1.0 align:0.0 propu:1.0
+0.13044509405605378
+0.13044509405605378
+0.13130687542321096
+0.13130687542321096
+simulation are done running; starting data analysis
+simul running with par :
+rand:8.0 attra:1.0 align:1.0 propu:0.0
+0.13091677814662506
+0.13091677814662506
+0.13179804786206212
+0.13179804786206212
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:8.0 align:1.0 propu:1.0
+0.035605212307387404
+0.035591339245900015
+0.035591339245900015
+0.035991015541131974
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:0.0 propu:8.0
+0.20818246378965796
+0.2086032799881088
+0.2086032799881088
+0.2088814018398322
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:8.0 align:0.0 propu:1.0
+0.03048374044162579
+0.03048374044162579
+0.03104295694396274
+0.03104295694396274
+simulation are done running; starting data analysis
+simul running with par :
+rand:8.0 attra:0.0 align:1.0 propu:1.0
+0.14270987134387025
+0.14349006589704205
+0.14349006589704205
+0.14300516936695898
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:1.0 propu:8.0
+0.30463690564666634
+0.30463690564666634
+0.303190473831112
+0.303190473831112
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:7.0 align:1.0 propu:0.0
+0.03774100315446993
+0.03774100315446993
+0.03774860030718922
+0.03774860030718922
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:2.0 propu:7.0
+0.3549363325571025
+0.3549363325571025
+0.3548306330410081
+0.3548306330410081
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:7.0 align:0.0 propu:2.0
+0.04802622669243092
+0.04802622669243092
+0.048143156782110355
+0.048143156782110355
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:1.0 propu:7.0
+0.2596227848519381
+0.2596227848519381
+0.2606265999438471
+0.2606265999438471
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:1.0 propu:7.0
+0.24218104345241045
+0.24177112751655683
+0.24177112751655683
+0.2403699483063304
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:1.0 align:2.0 propu:0.0
+0.14672678326644537
+0.1462075343936316
+0.1462075343936316
+0.14695866157987744
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:7.0 align:2.0 propu:1.0
+0.06440172422335629
+0.0644080001321244
+0.0644080001321244
+0.06442154288262399
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:0.0 align:1.0 propu:2.0
+0.15310607937373036
+0.15314935011313152
+0.15314935011313152
+0.15220763348692795
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:0.0 align:2.0 propu:1.0
+0.15953525244017241
+0.15953525244017241
+0.1599213859849048
+0.15942889230210244
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:2.0 propu:7.0
+0.38221143206328756
+0.38346430163999407
+0.38346430163999407
+0.3826414969693967
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:7.0 propu:2.0
+0.7421998711787148
+0.7421998711787148
+0.7460991923896348
+0.7460991923896348
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:7.0 align:0.0 propu:1.0
+0.04000594559778031
+0.04018992881798213
+0.04018992881798213
+0.04026821252208955
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:7.0 align:1.0 propu:2.0
+0.05709029050851377
+0.05709029050851377
+0.05686799121372772
+0.05686799121372772
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:1.0 align:0.0 propu:2.0
+0.13846603577268
+0.13805512890386298
+0.13805512890386298
+0.13798576359642603
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:7.0 propu:1.0
+0.6866914399907513
+0.6866914399907513
+0.6845506944788519
+0.6845506944788519
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:7.0 propu:1.0
+0.6045672100282415
+0.6022827792366513
+0.6022827792366513
+0.6045285636426696
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:0.0 propu:7.0
+0.19294587854464978
+0.19294587854464978
+0.1938453153644156
+0.1938453153644156
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:2.0 align:1.0 propu:0.0
+0.12334406844043667
+0.12360171101091678
+0.12360171101091678
+0.12324134172323242
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:7.0 propu:0.0
+0.6050722555285801
+0.6050722555285801
+0.6077325802242811
+0.6077325802242811
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:7.0 propu:2.0
+0.787718376851806
+0.7836304480668549
+0.7836304480668549
+0.781592098961172
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:2.0 align:0.0 propu:1.0
+0.12498142000693653
+0.12498142000693653
+0.12494145237741333
+0.12494145237741333
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:1.0 align:0.0 propu:7.0
+0.19150968636971707
+0.1921372772465276
+0.1921372772465276
+0.19153280813886273
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:1.0 align:7.0 propu:0.0
+0.5677834481164016
+0.5696047829031032
+0.5696047829031032
+0.5684017902855538
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:7.0 align:2.0 propu:0.0
+0.052626467819452016
+0.05217328114419726
+0.05217328114419726
+0.05215544435085633
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:3.0 align:0.0 propu:6.0
+0.1756910931642141
+0.1756910931642141
+0.17601909197509455
+0.17601909197509455
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:6.0 align:1.0 propu:3.0
+0.09038530776726288
+0.0908929957555038
+0.0908929957555038
+0.0913435399428562
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:6.0 align:3.0 propu:0.0
+0.09992237691786818
+0.09992237691786818
+0.10102297312920114
+0.10102297312920114
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:3.0 align:1.0 propu:6.0
+0.2273190308675618
+0.2273190308675618
+0.22729062412261145
+0.22729062412261145
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:1.0 align:3.0 propu:0.0
+0.17184957637615816
+0.17274934350691176
+0.17274934350691176
+0.1735083981568647
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:3.0 propu:6.0
+0.46843052734149204
+0.46843614262828454
+0.46843614262828454
+0.4686439082396076
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:0.0 align:1.0 propu:3.0
+0.1649041272357925
+0.1649041272357925
+0.16437034467951575
+0.16437034467951575
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:0.0 align:1.0 propu:6.0
+0.21249104031445606
+0.21249104031445606
+0.21342912351979387
+0.21342912351979387
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:3.0 align:6.0 propu:0.0
+0.4756577317544468
+0.4756577317544468
+0.47305950552445125
+0.47305950552445125
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:1.0 align:0.0 propu:6.0
+0.17790615864836745
+0.17815455251118928
+0.17815455251118928
+0.17793192290541546
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:3.0 align:1.0 propu:0.0
+0.10681794909907678
+0.10681794909907678
+0.1071535450626765
+0.1071535450626765
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:6.0 align:1.0 propu:0.0
+0.050803811788799155
+0.04973294356636773
+0.04973294356636773
+0.05015838411864771
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:6.0 align:0.0 propu:1.0
+0.05244710895307932
+0.052732167335546414
+0.052732167335546414
+0.0531037671968158
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:3.0 align:0.0 propu:1.0
+0.1096952881137591
+0.1096952881137591
+0.11074534674395944
+0.11074534674395944
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:6.0 propu:3.0
+0.6739447389717419
+0.6729346479710647
+0.6729346479710647
+0.6742687740507688
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:1.0 align:6.0 propu:0.0
+0.40032766849989265
+0.4017143140266561
+0.4017143140266561
+0.3992363209962179
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:3.0 align:6.0 propu:1.0
+0.5399626748583791
+0.5399626748583791
+0.5408257774694876
+0.5408257774694876
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:6.0 align:0.0 propu:3.0
+0.07439032849427736
+0.07441675337330096
+0.07441675337330096
+0.07338122842656361
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:0.0 align:6.0 propu:1.0
+0.4198084196270789
+0.4198084196270789
+0.41918908652496323
+0.41918908652496323
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:1.0 align:0.0 propu:3.0
+0.14717171216700523
+0.14717171216700523
+0.14680704883647955
+0.14680704883647955
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:3.0 propu:6.0
+0.42992947860410574
+0.42939503542585344
+0.42939503542585344
+0.43126690779368776
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:6.0 align:3.0 propu:1.0
+0.1264001056995161
+0.12534476209351103
+0.12534476209351103
+0.12608697088308643
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:6.0 propu:3.0
+0.7250699433516656
+0.7250699433516656
+0.726827197806735
+0.726827197806735
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:0.0 align:3.0 propu:1.0
+0.18715816941650565
+0.186314885464665
+0.186314885464665
+0.18644007332903928
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:5.0 propu:1.0
+0.3013830121058977
+0.300955589687691
+0.300955589687691
+0.30192835554674724
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:4.0 propu:5.0
+0.5609711143041173
+0.5609711143041173
+0.5614996118845893
+0.5614996118845893
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:1.0 align:5.0 propu:4.0
+0.6523073874052421
+0.6517703017390873
+0.6517703017390873
+0.6517306644205519
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:5.0 align:4.0 propu:1.0
+0.25423937637285504
+0.25423937637285504
+0.25148028869180333
+0.25148028869180333
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:0.0 align:1.0 propu:4.0
+0.1774519810401493
+0.17674544583725577
+0.17674544583725577
+0.17622883945234438
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:1.0 propu:5.0
+0.19066574179590084
+0.19066574179590084
+0.18972732827957522
+0.18972732827957522
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:4.0 align:1.0 propu:0.0
+0.08647805909263571
+0.08647805909263571
+0.08615831805645015
+0.08615831805645015
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:5.0 align:0.0 propu:4.0
+0.10928603279988108
+0.10928603279988108
+0.10935077375348891
+0.10935077375348891
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:1.0 align:0.0 propu:4.0
+0.15600720077953392
+0.15583213595600257
+0.15583213595600257
+0.1560101735784241
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:4.0 align:0.0 propu:5.0
+0.14812234718987927
+0.14872483443161738
+0.14872483443161738
+0.14803118135724785
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:4.0 align:0.0 propu:1.0
+0.08922888899899255
+0.08940197195659713
+0.08940197195659713
+0.08850385638078251
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:1.0 propu:5.0
+0.1922885596789377
+0.1925937670316603
+0.1925937670316603
+0.1928920378536392
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:5.0 align:1.0 propu:0.0
+0.06720309171084576
+0.06720309171084576
+0.06703661497299708
+0.06703661497299708
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:1.0 align:0.0 propu:5.0
+0.16670993740606782
+0.16670993740606782
+0.16608597995012303
+0.16608597995012303
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:5.0 align:1.0 propu:4.0
+0.13867148920708847
+0.13824836083172307
+0.13824836083172307
+0.13888387917224065
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:5.0 propu:4.0
+0.5944755487291284
+0.5932593436720672
+0.5932593436720672
+0.5918878924507424
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:5.0 align:0.0 propu:1.0
+0.0687690961039819
+0.0687690961039819
+0.06935605872929362
+0.06935605872929362
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:0.0 align:4.0 propu:1.0
+0.229769608086013
+0.22899040446580454
+0.22899040446580454
+0.2308609555896877
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:5.0 propu:1.0
+0.3936676080529819
+0.3936676080529819
+0.39636360633536477
+0.39636360633536477
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:1.0 align:4.0 propu:0.0
+0.21686369717088638
+0.21686369717088638
+0.21737733075690763
+0.21737733075690763
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:0.0 align:4.0 propu:5.0
+0.5077996333548035
+0.5108266032469571
+0.5108266032469571
+0.5105048803448446
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:4.0 align:5.0 propu:0.0
+0.3502928206906803
+0.3513769013526235
+0.3513769013526235
+0.3512209945663842
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:5.0 align:4.0 propu:0.0
+0.21154502964541116
+0.21154502964541116
+0.21154502964541116
+0.20995755503806834
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:1.0 align:5.0 propu:0.0
+0.2867766602256024
+0.2855769707179309
+0.2855769707179309
+0.28459660770615536
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:2.0 align:2.0 propu:0.0
+0.1419603957125634
+0.1419603957125634
+0.14224049943021355
+0.14224049943021355
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:6.0 align:2.0 propu:2.0
+0.10448397165931725
+0.10357495582090538
+0.10357495582090538
+0.10341013063799567
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:2.0 propu:6.0
+0.31785859386612497
+0.31785859386612497
+0.3175345587870981
+0.3175345587870981
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:6.0 propu:2.0
+0.5254557465854102
+0.5251194899998348
+0.5251194899998348
+0.5251677154040529
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:6.0 align:2.0 propu:0.0
+0.06806916712084428
+0.06787164115014285
+0.06787164115014285
+0.06836975011973773
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:2.0 align:6.0 propu:0.0
+0.45129002956283343
+0.45129002956283343
+0.4493378916249649
+0.4493378916249649
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:6.0 propu:2.0
+0.6203075195296371
+0.622860162843317
+0.622860162843317
+0.6171239822292689
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:2.0 align:0.0 propu:6.0
+0.17824406678888174
+0.17824406678888174
+0.1775243191464764
+0.1775243191464764
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:0.0 align:2.0 propu:2.0
+0.1733756131397711
+0.1733756131397711
+0.17431931163190142
+0.17431931163190142
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:2.0 propu:6.0
+0.28164362747526794
+0.28186163272721265
+0.28186163272721265
+0.2825486795818263
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:2.0 align:0.0 propu:2.0
+0.13417232324233266
+0.13463574955820906
+0.13463574955820906
+0.13505425357974532
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:6.0 align:0.0 propu:2.0
+0.06336553865464335
+0.06336553865464335
+0.06289946985086459
+0.06289946985086459
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:3.0 propu:5.0
+0.38224611471700604
+0.38224611471700604
+0.3830315942459826
+0.3830315942459826
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:3.0 align:0.0 propu:2.0
+0.12244694379758543
+0.12244694379758543
+0.12260252027283687
+0.12260252027283687
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:3.0 propu:5.0
+0.328588415993658
+0.33065814464318155
+0.33065814464318155
+0.3297227039257461
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:2.0 align:5.0 propu:0.0
+0.3159979520718757
+0.3159979520718757
+0.31484780921237343
+0.31484780921237343
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:5.0 align:3.0 propu:0.0
+0.13282135130225106
+0.13282135130225106
+0.13333333333333333
+0.13333333333333333
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:2.0 align:0.0 propu:3.0
+0.1442223653569836
+0.1442223653569836
+0.14351649077606565
+0.14351649077606565
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:3.0 align:2.0 propu:5.0
+0.2714968042411931
+0.2714968042411931
+0.27416175329072323
+0.27416175329072323
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:3.0 align:0.0 propu:5.0
+0.160700919916101
+0.16049249368280236
+0.16049249368280236
+0.16158978678425737
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:0.0 align:2.0 propu:5.0
+0.23996994170011066
+0.23996994170011066
+0.2398067680721399
+0.2398067680721399
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:5.0 align:3.0 propu:2.0
+0.20282316801268394
+0.2062676509934103
+0.2062676509934103
+0.20532527374523113
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:5.0 align:2.0 propu:0.0
+0.08815802077656114
+0.0899007415481676
+0.0899007415481676
+0.08944557300698608
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:5.0 align:2.0 propu:3.0
+0.16359675634609985
+0.16623825331549655
+0.16623825331549655
+0.16595980115278536
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:5.0 align:0.0 propu:3.0
+0.09550149465721977
+0.0942225305124775
+0.0942225305124775
+0.0945604386529918
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:3.0 align:5.0 propu:0.0
+0.3380296949578028
+0.33866587392029596
+0.33866587392029596
+0.33748137871806305
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:5.0 align:0.0 propu:2.0
+0.08168954070257146
+0.08168954070257146
+0.08124527242398719
+0.08124527242398719
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:2.0 align:3.0 propu:0.0
+0.17645477216799618
+0.17645477216799618
+0.1775329072321591
+0.1775329072321591
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:5.0 propu:3.0
+0.44974483476192834
+0.44974483476192834
+0.4515489933772647
+0.4515489933772647
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:0.0 align:5.0 propu:2.0
+0.3595316190193067
+0.3595316190193067
+0.3599481411749162
+0.3599481411749162
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:3.0 align:5.0 propu:2.0
+0.46254867958182627
+0.46254867958182627
+0.4611973773307569
+0.4611973773307569
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:2.0 align:0.0 propu:5.0
+0.16508546796809195
+0.16508546796809195
+0.1655409668202613
+0.1655409668202613
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:0.0 align:3.0 propu:2.0
+0.2079565310740062
+0.2079565310740062
+0.20627723001205636
+0.20627723001205636
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:5.0 propu:3.0
+0.5426031808948125
+0.5424641199689507
+0.5424641199689507
+0.543080810583164
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:3.0 align:2.0 propu:0.0
+0.13274405853110705
+0.13274405853110705
+0.1324877372045781
+0.1324877372045781
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:0.0 align:2.0 propu:3.0
+0.1906749905035591
+0.1906749905035591
+0.1907866356174338
+0.1907866356174338
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:4.0 propu:2.0
+0.3271208442748848
+0.3265735189681085
+0.3265735189681085
+0.3257639267370229
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:4.0 align:2.0 propu:0.0
+0.11352524401724223
+0.1130839485375481
+0.1130839485375481
+0.1133891558902707
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:0.0 align:4.0 propu:4.0
+0.385797618457778
+0.385797618457778
+0.3861877157343639
+0.3861877157343639
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:4.0 align:0.0 propu:4.0
+0.1322244793473055
+0.13219904540124527
+0.13219904540124527
+0.13233942757105815
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:4.0 propu:2.0
+0.26289748798493784
+0.26289748798493784
+0.2629381162364366
+0.2629381162364366
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:2.0 align:0.0 propu:4.0
+0.15415977142479645
+0.15410130637995673
+0.15410130637995673
+0.15306941485408512
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:2.0 align:4.0 propu:4.0
+0.45765479198665543
+0.45765479198665543
+0.45597846372359574
+0.45597846372359574
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:4.0 align:0.0 propu:2.0
+0.10220680770945846
+0.10171001998381476
+0.10171001998381476
+0.10285421724553667
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:2.0 align:4.0 propu:0.0
+0.23271928520702242
+0.23271928520702242
+0.23239128639614196
+0.23239128639614196
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:2.0 propu:4.0
+0.22929263901963698
+0.22796247667178648
+0.22796247667178648
+0.22738311119919405
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:2.0 propu:4.0
+0.21237477084675221
+0.21237477084675221
+0.21171646104807676
+0.21171646104807676
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:4.0 align:4.0 propu:0.0
+0.2380478620621315
+0.2392647277411683
+0.2392647277411683
+0.2369300896794332
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:3.0 align:0.0 propu:4.0
+0.14754628482716478
+0.14725428991395398
+0.14725428991395398
+0.14688533254058697
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:4.0 align:0.0 propu:3.0
+0.11718674131694991
+0.11749459115757485
+0.11749459115757485
+0.11754611967167088
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:4.0 align:3.0 propu:3.0
+0.2755328742010603
+0.27337197971890537
+0.27337197971890537
+0.27429123519793885
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:3.0 align:4.0 propu:0.0
+0.24272242316140646
+0.24272242316140646
+0.24266164593965217
+0.24266164593965217
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:3.0 align:0.0 propu:3.0
+0.13465622883945236
+0.13438966787230178
+0.13438966787230178
+0.13482270557730103
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:4.0 align:3.0 propu:0.0
+0.16316570050702736
+0.1641216205057061
+0.1641216205057061
+0.1637199623445474
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:3.0 align:4.0 propu:3.0
+0.3868245553188327
+0.3868245553188327
+0.3899317907810203
+0.3899317907810203
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:0.0 align:4.0 propu:3.0
+0.3133009628565294
+0.3133009628565294
+0.3108490643941271
+0.3108490643941271
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:3.0 align:3.0 propu:0.0
+0.1784657054616922
+0.17767494095691094
+0.17767494095691094
+0.17725082164858214
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:0.0 align:3.0 propu:3.0
+0.23441774430626436
+0.23398074286941156
+0.23398074286941156
+0.23466977158995195
+simulation are done running; starting data analysis
+simul running with par :
+rand:0.0 attra:3.0 align:3.0 propu:4.0
+0.3285913887925482
+0.3277431501758906
+0.3277431501758906
+0.3283479495945433
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:0.0 align:3.0 propu:4.0
+0.27216172025962443
+0.2735050950469867
+0.2735050950469867
+0.2729723034236734
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:7.0 align:1.0 propu:1.0
+0.04653685444846323
+0.04653685444846323
+0.046322812928372065
+0.046322812928372065
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:1.0 propu:7.0
+0.2488008059588102
+0.2488008059588102
+0.24819435498521858
+0.24819435498521858
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:7.0 propu:1.0
+0.6675624700655667
+0.6665764917669986
+0.6665764917669986
+0.6703777106145435
+simulation are done running; starting data analysis
+simul running with par :
+rand:7.0 attra:1.0 align:1.0 propu:1.0
+0.14137211184330048
+0.14211927529769278
+0.14211927529769278
+0.14173578424086278
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:6.0 align:1.0 propu:1.0
+0.061398206411336274
+0.061398206411336274
+0.06174932699136237
+0.06174932699136237
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:6.0 align:2.0 propu:1.0
+0.08317957356851476
+0.08310822639515103
+0.08310822639515103
+0.08356438586929595
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:2.0 align:1.0 propu:1.0
+0.1360356075244843
+0.1360356075244843
+0.13565046491271532
+0.13565046491271532
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:6.0 align:1.0 propu:2.0
+0.07461527027696577
+0.07461527027696577
+0.07474210969627905
+0.07474210969627905
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:1.0 align:1.0 propu:6.0
+0.21649771259640951
+0.21649771259640951
+0.21663314010140547
+0.21663314010140547
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:2.0 propu:6.0
+0.2981737105484814
+0.2981737105484814
+0.29661563361905235
+0.29661563361905235
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:1.0 align:6.0 propu:1.0
+0.4785443194767874
+0.4785443194767874
+0.48442352474855077
+0.48442352474855077
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:1.0 align:1.0 propu:2.0
+0.15240086541478803
+0.15153743249269186
+0.15153743249269186
+0.15239888354886125
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:1.0 propu:6.0
+0.22314224842689392
+0.22196303820046573
+0.22196303820046573
+0.222383193776941
+simulation are done running; starting data analysis
+simul running with par :
+rand:6.0 attra:1.0 align:2.0 propu:1.0
+0.15882772630431552
+0.1596426035112058
+0.1596426035112058
+0.15962410609588928
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:6.0 propu:2.0
+0.5915757485672761
+0.5899450032205321
+0.5899450032205321
+0.5908593040347487
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:6.0 propu:1.0
+0.5266187715734364
+0.5266187715734364
+0.5279307668169582
+0.5279307668169582
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:1.0 align:3.0 propu:1.0
+0.19052502931510018
+0.19052502931510018
+0.1920183652909214
+0.1920183652909214
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:3.0 align:1.0 propu:5.0
+0.197471799699417
+0.19763332177244877
+0.19763332177244877
+0.19783943582883284
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:5.0 align:3.0 propu:1.0
+0.16527836958496425
+0.16527836958496425
+0.16535500173413267
+0.16535500173413267
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:5.0 propu:3.0
+0.5019990420981354
+0.5019990420981354
+0.5040942046937191
+0.5040942046937191
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:5.0 align:1.0 propu:3.0
+0.11559133924590001
+0.11559133924590001
+0.11691985003881154
+0.11691985003881154
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:1.0 align:1.0 propu:3.0
+0.16440899106508777
+0.16373020198516905
+0.16373020198516905
+0.16466399114766553
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:3.0 align:1.0 propu:1.0
+0.12344712546862871
+0.12229202794430957
+0.12229202794430957
+0.1232558754066954
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:1.0 align:5.0 propu:1.0
+0.3335130225106938
+0.3326340649721713
+0.3326340649721713
+0.33322829443921453
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:3.0 align:5.0 propu:1.0
+0.3925518175362103
+0.3925518175362103
+0.393222679152422
+0.393222679152422
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:5.0 align:1.0 propu:1.0
+0.08074319972253877
+0.08166641893342583
+0.08166641893342583
+0.08145832301111497
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:3.0 propu:5.0
+0.3542020512312342
+0.3542020512312342
+0.35665461031561213
+0.35665461031561213
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:1.0 align:1.0 propu:5.0
+0.19340996548250178
+0.19494293877685842
+0.19494293877685842
+0.1949971097788568
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:4.0 align:1.0 propu:1.0
+0.1027732910535269
+0.1027732910535269
+0.10292655535186378
+0.10292655535186378
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:1.0 align:4.0 propu:1.0
+0.247333234240037
+0.247333234240037
+0.24598622603180895
+0.24598622603180895
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:4.0 align:1.0 propu:4.0
+0.1628862574113528
+0.16358651670547822
+0.16358651670547822
+0.16329782490214537
+simulation are done running; starting data analysis
+simul running with par :
+rand:4.0 attra:1.0 align:1.0 propu:4.0
+0.17846669639465557
+0.17846669639465557
+0.1776049150274984
+0.1776049150274984
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:4.0 align:4.0 propu:1.0
+0.28074452096648994
+0.28074452096648994
+0.2764587358998497
+0.2764587358998497
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:1.0 align:4.0 propu:4.0
+0.42105137987415153
+0.4256060380848569
+0.4256060380848569
+0.4236776825381096
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:2.0 align:5.0 propu:1.0
+0.3688282217707972
+0.3688282217707972
+0.3708223092041157
+0.3708223092041157
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:5.0 align:2.0 propu:1.0
+0.110826603246957
+0.10866868156369222
+0.10866868156369222
+0.10879486036102991
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:1.0 align:5.0 propu:2.0
+0.40217377661067893
+0.4044981750317924
+0.4044981750317924
+0.40476209351104064
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:1.0 align:2.0 propu:5.0
+0.24781846108110786
+0.24781846108110786
+0.24855142116302498
+0.24855142116302498
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:2.0 align:2.0 propu:1.0
+0.1579547143635733
+0.15746255099175874
+0.15746255099175874
+0.15820905382417547
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:5.0 align:1.0 propu:2.0
+0.09678244066788881
+0.09678244066788881
+0.09650828254801896
+0.09650828254801896
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:1.0 align:2.0 propu:2.0
+0.17402632578572727
+0.1745065979619812
+0.1745065979619812
+0.17549488843746386
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:2.0 propu:5.0
+0.26221539579514114
+0.26208294108903535
+0.26208294108903535
+0.261907876265504
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:5.0 align:2.0 propu:2.0
+0.13472724570182826
+0.13472724570182826
+0.13537531585988208
+0.13537531585988208
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:2.0 align:1.0 propu:5.0
+0.19753621034203703
+0.19625790681927036
+0.19625790681927036
+0.19582255693735653
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:5.0 propu:2.0
+0.44223521445440883
+0.44223521445440883
+0.44210936596805894
+0.44210936596805894
+simulation are done running; starting data analysis
+simul running with par :
+rand:5.0 attra:2.0 align:1.0 propu:2.0
+0.14772531338254968
+0.14815769046557334
+0.14815769046557334
+0.14783728880741218
+simulation are done running; starting data analysis
+simul running with par :
+rand:2.0 attra:3.0 align:1.0 propu:4.0
+0.17568944160927513
+0.17568944160927513
+0.17353052899304697
+0.17353052899304697
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:3.0 propu:4.0
+0.3121118433004674
+0.3116543625823713
+0.3116543625823713
+0.3101382351483922
+simulation are done running; starting data analysis
+simul running with par :
+rand:1.0 attra:2.0 align:4.0 propu:3.0
+0.3713366034121125
+0.37001635039389585
+0.37001635039389585
+0.3707942327701531
+simulation are done running; starting data analysis
+simul running with par :
+rand:3.0 attra:1.0 align:2.0 propu:4.0
+0.21768022593271566
+0.21662025797288148
+0.21662025797288148
+0.21656344448298073
 simulation are done running; starting data analysis

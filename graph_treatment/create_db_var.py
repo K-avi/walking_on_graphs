@@ -147,4 +147,4 @@ def query(query, db_name):
     
         
 if __name__=='__main__':
-    gen_db_var("hongkong_full_graph.csv",2000)
+    gen_db_var("full_graph.csv",2000)
