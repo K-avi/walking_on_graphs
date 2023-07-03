@@ -1,5 +1,5 @@
-belgrade 
-cong_model
+belgrade/*
+conf_model/*
 database/*
 *trace*
 trash
