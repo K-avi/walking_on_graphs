@@ -13,10 +13,10 @@
 int main(int argc , char ** argv){
 
     int8_t c;
-    uint8_t helpset=0 , dumpset=0, loadset=0, fluxset=0;
-    uint16_t flux_dump_start = 0;
+    uint8_t helpset=0 , dumpset=0, loadset=0, fluxset=0, spreadset=0;
+    uint16_t flux_dump_start = 0, spread_flag = 0;
     char * trace_name =NULL, *warray_name =NULL;
-    while ((c = getopt(argc, argv, "hd:w:l:")) != -1) {
+    while ((c = getopt(argc, argv, "hd:w:l:s:")) != -1) {
         
         switch (c) {
         case 'h':
@@ -34,6 +34,10 @@ int main(int argc , char ** argv){
         case 'l':
             fluxset = 2; 
             flux_dump_start = atoi(optarg);   
+            break; 
+        case 's':
+            spreadset = 2; 
+            spread_flag = atoi(optarg);   
             break;     
 
         case '?':
@@ -43,6 +47,8 @@ int main(int argc , char ** argv){
             }else if(optopt=='w'){
                 fprintf(stderr, "Option -%c requires an argument.\n", optopt);
             }else if(optopt=='l'){
+                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
+            }else if(optopt=='s'){
                 fprintf(stderr, "Option -%c requires an argument.\n", optopt);
             }else{
                 fprintf(stderr, "Unknown option character `\\x%x'.", optopt);
@@ -64,7 +70,7 @@ int main(int argc , char ** argv){
         return ERRFLAG_NOFILE;
     }
     
-    uint8_t optset = dumpset + loadset + fluxset; //number of args to remove 
+    uint8_t optset = dumpset + loadset + fluxset + spreadset; //number of args to remove 
 
     char * path = argv[1+optset]; 
     char * end=argv[2+optset];
@@ -77,7 +83,7 @@ int main(int argc , char ** argv){
     }
 
     //parses number of iterations
-    end= argv[3+optset];
+    end = argv[3+optset];
     uint32_t iteration_num = (uint32_t ) strtol( argv[3+optset], &end , 10);
  
     if(end== argv[3+optset]){
@@ -131,7 +137,7 @@ int main(int argc , char ** argv){
         if(failure){report_err("in main iterate_ntimes call", failure); exit(failure);}
     }else{
 
-        failure=iterate_ntimes_dump(&gtable, &tactics, iteration_num, trace_name, flux_dump_start);
+        failure=iterate_ntimes_dump(&gtable, &tactics, iteration_num, trace_name, flux_dump_start, spread_flag);
         if(failure){report_err("in main iterate_ntimes_dump call", failure); exit(failure);}
 
     }

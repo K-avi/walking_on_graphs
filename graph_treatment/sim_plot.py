@@ -1,6 +1,6 @@
 #an actual clean script to plot stuff 
 import numpy as np 
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import argparse as arg
 import os
 

@@ -27,7 +27,7 @@ void freeTactics( Tactics * t){
     if(t->rule_arr)free(t->rule_arr);
 }//tested ;  ok
 
-static uint8_t addRule( Tactics * t , uint16_t rule_coeff, rule_fun fn){
+uint8_t addRule( Tactics * t , uint16_t rule_coeff, rule_fun fn){
     /*adds a rule function to a tactics structure*/
     if(!t){ report_err("addRule", T_NULL); return T_NULL;}
 
@@ -49,7 +49,7 @@ static uint8_t addRule( Tactics * t , uint16_t rule_coeff, rule_fun fn){
 }//tested ;ok
 //assumed that parameters are passed correctly ; do not call outside of parse args
 
-static uint8_t rule_rand( GraphTable * gtable , uint32_t node_from, uint32_t walker_index){
+uint8_t rule_rand( GraphTable * gtable , uint32_t node_from, uint32_t walker_index){
     /*
     chooses a random neighboor node at entry node from in a gt;
     
@@ -308,7 +308,7 @@ static uint8_t rule_speed_reaction(GraphTable * gtable, uint32_t node_from , uin
 }//tested; weird ; seems ok
 
 
-static uint8_t rule_speed_constant(GraphTable * gtable, uint32_t node_from , uint32_t choice_coeff, bool * movement_choice ){
+uint8_t rule_speed_constant(GraphTable * gtable, uint32_t node_from , uint32_t choice_coeff, bool * movement_choice ){
     /*O(1)
     returns true if the value generated is higher than the constant 
     probability to move 
