@@ -217,19 +217,27 @@ done :
 
     - run simuls with slow down rule (on paris)
 
+    - write the search functions 
+    
+    - redo the loop so that the stop condition is one group left 
+    
+    - write one set of dynamic array manip for the group array AND the queue so that I don't 
+      have to rewrite the same thing twice 
+
 pending : 
 
     Data analysis : 
 
-      - propu 10 turns 
-
-      Need other simulations to finish before starting : 
-
-        - rerun Paris 
-        - rerun Paris w mcrowd 
-   
+        
     C : 
-      - implement movement together (Paris)
+
+        - adapt main 
+        
+        - test on toy graphs 
+
+        - test on a highly saturated graph ... maybe it'll stop ???
+      
+
 
     Documentation : 
 

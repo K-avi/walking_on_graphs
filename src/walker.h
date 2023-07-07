@@ -11,7 +11,7 @@ struct s_graph_table_entry{
 
     Line * first_neighboor_ref;  //will replace by a 32 bit integer 
     //representing index to gain a bit of space 
-    uint16_t neighboor_num; //Might store on one byte
+    uint16_t neighboor_num; //Might store on one byte fucks things up in scale free graph so I won't
 };
 
 
@@ -30,7 +30,7 @@ typedef struct s_warray{
 typedef struct s_walker_num_curnext{
     //structure to store the number of walker at each node ;updated to keep track of where 
     //walkers came in and stuff 
-    uint32_t size; //size of number of nodes
+    uint32_t size; //size is number of nodes
     uint32_t *cur_num;
     uint32_t *next_num; 
 }WalkerCurNext;

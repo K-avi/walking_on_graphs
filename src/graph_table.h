@@ -3,7 +3,7 @@
 
 #include "common.h"
 #include "walker.h"
-#include <stdint.h>
+
 
 typedef struct s_graph_table_entry GraphTableEntry;
 
@@ -42,7 +42,7 @@ typedef struct s_graph_table{ //the main table structure
 
     GraphTableEntry * entries; //the entries of the table storing adjacency lists 
     //and other stuff
-
+    uint32_t * seen_array; //array used for searches in graphh
     LineArray* arrLine; //the big array containing the adjacency lists
 
     WalkerArray * warray; //the big array containing the walkers

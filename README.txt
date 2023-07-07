@@ -1,3 +1,6 @@
+The search branch will add functions to check if there is only one group of walkers 
+left in a graph. These functions will be as simple as possible and 
+will rely on basic search algorithms
 
 This repo contains the code written during my internship at the Lip6 lab. 
 

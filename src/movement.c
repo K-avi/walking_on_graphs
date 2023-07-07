@@ -2,6 +2,7 @@
 #include "common.h"
 #include "graph_table.h"
 #include "misc.h"
+#include "search.h"
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -40,6 +41,7 @@ static uint8_t prepare_ite( GraphTable * gtable){
     failure= swap_flux_curnext(gtable->arrLine);
     if(failure) { report_err("prepare_ite", failure); return failure;}
 
+    memset(gtable->seen_array,0, sizeof(uint32_t)* gtable->table_size);
     gtable->curgen++;
     return MV_OK;
 
@@ -178,6 +180,110 @@ uint8_t iterate_ntimes_dump( GraphTable * gtable, Tactics * tactics, uint32_t it
     fclose(f_wkend);
     
     return MV_OK;
-}//done ; tested scaling ; seems constant (great) however 
-//tested outputs; seems ok
-//updated ;  tested ; seems ok
+}//done ; tested scaling ; seems constant compared to the one without dump (great)
+//tested outputs; ok
+//updated ;  tested ;  ok
+
+uint8_t iterate_while_groups( GraphTable * gtable, Tactics * tactics, uint32_t iter_num, char * trace_name, uint16_t flux_start){
+    /*
+    O(infinity, litterally infinity )
+    clone of iterate_ntimes_dump that won't stop while there's more than a group 
+    (I'm forced to do that ; I did NOT do this out of my own will)
+    */
+    if(!gtable){ report_err("iterate_while_groups", GT_NULL); return GT_NULL;}
+    if(!tactics){ report_err("iterate_while_groups", T_NULL); return T_NULL;}
+
+    char * trace_human_readable = malloc( (5+ strnlen(trace_name,252)) * sizeof(char));
+    snprintf(trace_human_readable, 256, "%s_hr", trace_name);
+
+    char * trace_flux= malloc( (7+ strnlen(trace_name,250 )) * sizeof(char)); 
+    snprintf(trace_flux, 256, "%s_flux", trace_name);
+
+    char * trace_curnum=malloc( (9+ strnlen(trace_name,248 )) * sizeof(char)); ; 
+    snprintf(trace_curnum, 256, "%s_curnum", trace_name);
+
+    char * trace_walkerpos=malloc( (8+ strnlen(trace_name,249 )) * sizeof(char)); ; 
+    snprintf(trace_walkerpos, 256, "%s_wkpos", trace_name);
+
+    char * trace_lines=malloc( (7+ strnlen(trace_name,250 )) * sizeof(char)); ; 
+    snprintf(trace_lines, 256, "%s_lines", trace_name);
+
+    FILE * f_hr = fopen(trace_human_readable, "w");
+    FILE * f_flux = fopen(trace_flux, "wb");
+    FILE * f_curnum = fopen(trace_curnum, "wb");
+    FILE * f_wkpos = fopen(trace_walkerpos, "wb");
+    FILE * f_lines = fopen(trace_lines, "w");
+    
+    free(trace_human_readable);free(trace_flux); 
+    free(trace_curnum); free(trace_walkerpos); free(trace_lines);
+
+    //dumps human readable info once
+
+    if(!(f_hr && f_flux && f_curnum && f_wkpos && f_lines)){
+        //printf("%p %p %p %p\n%s %s %s %s\n", f_hr , f_flux , f_curnum , f_wkpos, trace_human_readable, trace_flux, trace_curnum , trace_walkerpos);
+        report_err("iterate_while_groups",  ERRGLAG_CANTWRITE);
+        return ERRGLAG_CANTWRITE;
+    }
+    printGraphTabVar(gtable, f_hr);
+    fclose(f_hr);
+
+    write_lines( gtable , f_lines );
+    fclose(f_lines);
+
+    uint8_t failure;
+    uint64_t i=0;
+    bool one_gp = 0;
+
+    while(!one_gp){
+        
+        failure= prepare_ite(gtable);
+        if(failure){ report_err("iterate_while_groups prepare_it call", failure); return failure;}
+
+        failure = one_gp_check(gtable, &one_gp);
+        if(failure){ report_err("iterate_while_groups one_gp_check call", failure); return failure;}
+
+        if( flux_start <= i){ //dumps flux only if reached 
+            dump_trace(gtable, f_curnum, f_flux, f_wkpos);
+        }else{
+             dump_trace(gtable, f_curnum, NULL, f_wkpos);
+        }   
+
+      
+        failure= iterate_once(gtable, tactics);
+        if(failure){report_err("iterate_while_groups iterate_once call", failure); return failure;}
+        i++;
+        
+    }
+ 
+    fclose(f_curnum); 
+    fclose(f_flux);
+    fclose(f_wkpos);
+
+    //dumps final graph state 
+    char * trace_hrend = malloc( (8+ strnlen(trace_name,249)) * sizeof(char));
+    snprintf(trace_hrend, 256, "%s_hrend", trace_name);
+    FILE * f_hrend = fopen(trace_hrend, "w");
+    free(trace_hrend);
+    if(!f_hrend){
+        report_err("iterate_while_groups cant write2",  ERRGLAG_CANTWRITE);
+        return ERRGLAG_CANTWRITE;
+    }
+    printGraphTab(gtable, f_hrend);
+    fclose(f_hrend);
+
+    //dumps final position of wk
+    char * trace_wkend=malloc( (8+ strnlen(trace_name,249 )) * sizeof(char)); ; 
+    snprintf(trace_wkend, 256, "%s_wkend", trace_name);
+    FILE * f_wkend = fopen(trace_wkend, "w");
+    free(trace_wkend);
+    if(!f_wkend){
+        report_err("iterate_while_groups cant write3",  ERRGLAG_CANTWRITE);
+        return ERRGLAG_CANTWRITE;
+    }
+    fwrite( gtable->warray->array, sizeof(Walker), gtable->warray->size , f_wkend);
+    fclose(f_wkend);
+    
+    return MV_OK;
+}//not tested; 
+//is as ok as check_one_gp 
+//don't like the boilerplate stuff but fuck it

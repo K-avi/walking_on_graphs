@@ -1,6 +1,8 @@
 #include "graph_table.h"
 #include "common.h"
 #include "misc.h"
+#include <stdint.h>
+#include <stdlib.h>
 
 static uint8_t initGtEntry( GraphTableEntry * gentry ){
     /*
@@ -88,6 +90,7 @@ uint8_t initGraphTab(GraphTable *gt, uint32_t arrline_size ,uint32_t table_size,
     gt->entries=GROW_ARRAY(GraphTableEntry, gt->entries, 0, table_size );
 
     if(!gt->entries){
+        report_err("initGraphTab", GT_REALLOC);
         return GT_REALLOC;
     }
 
@@ -113,9 +116,12 @@ uint8_t initGraphTab(GraphTable *gt, uint32_t arrline_size ,uint32_t table_size,
     failure=initWalkerCurNext(gt->wkcn, table_size);
     if(failure)return failure;
 
+    gt->seen_array= calloc(table_size, sizeof(uint32_t));
+    if(!gt->seen_array) return GT_MALLOC;
+
     return GT_OK;
 }//tested ok;
-
+//doesn't report errors for some reason
 
 
 void freeGraphTab( GraphTable * gt){
@@ -131,6 +137,7 @@ void freeGraphTab( GraphTable * gt){
 
     freeWalkerCurNext(gt->wkcn);
     free(gt->wkcn);
+    free(gt->seen_array);
 
     return ;
 }//tested; ok

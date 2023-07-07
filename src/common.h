@@ -13,7 +13,8 @@ typedef enum {
     WKCN_NULL, WKCN_MALLOC, WKCN_REALLOC, MV_NULL, L_ARRNULL, T_CANTCHOOSE, ERRFLAG_REALLOC,
     ERRFLAG_INVALID_ARG, PRS_NULL, PRS_INVALID_FORMAT, PRS_COEFF, AR_MALLOC, AR_NULL, AR_FULL,
     ERRFLAG_INVALIDOPT, ERRGLAG_CANTWRITE, MTC_REFFNULL, WA_NOREAD, WA_OPEN, WA_READFAIL,
-    ERRFLAG_WARNING, PRS_NOSUM
+    ERRFLAG_WARNING, PRS_NOSUM, GA_NULL, GA_MALLOC, GA_REALLOC, ERRFLAG_NULL, GA_NOWK, 
+    STACK_NULL , STACK_MALLOC, STACK_REALLOC, 
 }ErrFlag;
 
 //ndref stands for node ref 
@@ -34,6 +35,8 @@ typedef enum {
 #define PFN_OK FG_OK // parse function
 #define AR_OK FG_OK //arena 
 #define MTC_OK FG_OK //meta choice 
+#define GA_OK FG_OK //group array
+#define STACK_OK FG_OK //queue stands for queue....
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -42,7 +45,6 @@ typedef enum {
 #include <stddef.h>
 #include <stdint.h>
 
-#include <unistd.h> //windows compatibility is overrated anyways
-
+#include <unistd.h> //windows compatibility is cringe
 
 #endif 

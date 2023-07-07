@@ -88,6 +88,15 @@ char * str_flag(uint8_t flag){
   case WA_READFAIL : return "couldn't properly read file at path given\n";
   case ERRFLAG_WARNING : return "default warning flag\n";
   case PRS_NOSUM : return "sum of coefficients of arguments is 0; first argument set to 1\n";
+  case GA_NULL : return "group array passed is NULL\n";
+  case GA_MALLOC : return "failed to allocate memory to group array's element field\n"; 
+  case GA_REALLOC : return "failed to reallocate group array's elements\n";
+  case ERRFLAG_NULL : return "null pointer caught\n";
+  case GA_NOWK : return "no walkers on the graph passsed\n";
+  case STACK_NULL : return "queue passed is NULL\n";
+  case STACK_MALLOC : return "couldn't allocate memory for queue\n";
+  case STACK_REALLOC : return "realloc of queue failed\n";
+
   default : return "unknown error ; how did you get here?\n";
   }
 }//ok
