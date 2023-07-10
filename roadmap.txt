@@ -227,12 +227,16 @@ done :
 pending : 
 
     Data analysis : 
+	
+	- retrieve lattice 100
 
         
     C : 
 
         - adapt main 
-        
+
+        - check every 400 iterations if there's only one group ; maybe cap at a certain number 
+
         - test on toy graphs 
 
         - test on a highly saturated graph ... maybe it'll stop ???

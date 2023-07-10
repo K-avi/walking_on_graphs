@@ -78,8 +78,9 @@ static uint8_t pop_dyn_arr(S_STACK * arr , uint32_t * ret){
     if(!arr){report_err("pop_dyn_arr", STACK_NULL); return STACK_NULL;}
     if(!arr){report_err("pop_dyn_arr", ERRFLAG_NULL); return ERRFLAG_NULL;}
 
-    *ret =  arr->elem[arr->cur_in];
+
     (arr->cur_in)--;
+    *ret =  arr->elem[arr->cur_in];
 
     return STACK_OK;
 }///not tested
@@ -98,7 +99,7 @@ static uint8_t get_group_nodes(GraphTable * gt, GROUP_ARR * arr, uint32_t * sum)
 
     int64_t start = -1; 
     for(uint32_t i = 0 ; i<gt->wkcn->size; i++){
-        if(gt->wkcn->cur_num[i]){
+        if(gt->wkcn->cur_num[i]!=0){
             start = i; 
             break;
         }
@@ -117,7 +118,7 @@ static uint8_t get_group_nodes(GraphTable * gt, GROUP_ARR * arr, uint32_t * sum)
         uint32_t cur_node;
         uint8_t failure = pop_stack(&stack, &cur_node);
         if(failure){ report_err("get_group_nodes", failure); return failure;}
-
+    printf("cur visiting %u %u ", cur_node, gt->wkcn->cur_num[cur_node]);
         *sum+= gt->wkcn->cur_num[cur_node];
         app_ga_arr(arr, cur_node);
 
@@ -125,7 +126,9 @@ static uint8_t get_group_nodes(GraphTable * gt, GROUP_ARR * arr, uint32_t * sum)
         //seen AND with walkers to the stack
             
             uint32_t neighbor_index = (gt->entries[cur_node].first_neighboor_ref+i)->node_index;
+            printf("index : %u ", neighbor_index);
             if(gt->wkcn->cur_num[neighbor_index] && !gt->seen_array[neighbor_index]){ 
+                printf("seen %u\n",neighbor_index );
                 gt->seen_array[neighbor_index]=1; 
                 stack_darr(&stack, neighbor_index);
             }
@@ -155,15 +158,15 @@ uint8_t one_gp_check( GraphTable * gt, bool * check ){
     GROUP_ARR ga; 
     uint8_t failure = init_gp_arr(&ga); 
     if(failure){report_err("one_gp_check", failure); return failure;}
-    uint32_t sum;
+    uint32_t sum=0;
 
     // retrieves a group from gt to store it in ga and
     //checks wether the number of walkers in the group is
     //the number of walkers in the graph
     get_group_nodes(gt, &ga , &sum);
     //actually I'm not sure I don't even NEED ga but whatever
-
-    *check = (sum == gt->warray->size);
+    printf("sum is %u warr size %u\n",sum, gt->warray->size);
+    *check = (sum >= gt->warray->size);
 
     free_gp_arr(&ga);
     return GA_OK;

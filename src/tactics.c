@@ -363,7 +363,7 @@ uint8_t choose_node( Tactics * t, GraphTable* gtable, uint32_t node_from, uint32
     }
 
     for(uint32_t i=0; i<t->numb ; i++){
-     
+
         if( uint_coeff<= t->rule_arr[i].rule_coeff){
 
             uint32_t prev_index= gtable->warray->array[walker_index].index_entry;
@@ -582,6 +582,7 @@ uint8_t parse_args(Tactics *t, uint8_t argc , char ** argv, uint8_t* prop_flag )
     for(uint8_t i=0; i<rule_count; i++){
         addRule(t, coeff_arr[i], rule_arr[i]);
     }
+    t->rule_arr[t->numb-1].rule_coeff = UINT16_MAX;
     free(coeff_arr);
     free(rule_arr);
     return T_OK;

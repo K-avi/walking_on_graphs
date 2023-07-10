@@ -13,20 +13,17 @@
 int main(int argc , char ** argv){
 
     int8_t c;
-    uint8_t helpset=0 , dumpset=0, loadset=0, fluxset=0;
+    uint8_t helpset=0 , loadset=0, fluxset=0;
     uint16_t flux_dump_start = 0;
-    char * trace_name =NULL, *warray_name =NULL;
-    while ((c = getopt(argc, argv, "hd:w:l:")) != -1) {
+    char  *warray_name =NULL;
+    while ((c = getopt(argc, argv, "hw:l:")) != -1) {
         
         switch (c) {
         case 'h':
             helpset=1;
             break;
  
-        case 'd':
-            dumpset=2;
-            trace_name = optarg;
-            break;
+    
         case 'w':
             loadset = 2; 
             warray_name = optarg;   
@@ -37,10 +34,7 @@ int main(int argc , char ** argv){
             break;     
 
         case '?':
-            if(optopt=='d'){
-                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
-                
-            }else if(optopt=='w'){
+            if(optopt=='w'){
                 fprintf(stderr, "Option -%c requires an argument.\n", optopt);
             }else if(optopt=='l'){
                 fprintf(stderr, "Option -%c requires an argument.\n", optopt);
@@ -55,38 +49,33 @@ int main(int argc , char ** argv){
     }
 
     if(helpset){ //prints help
-        fprintf(stdout, "usage : ./walking_on_graphs path/of/graph nb_walker nb_iterations rule1:coeff rule2:coeff\n \
+        fprintf(stdout, "usage : ./walking_on_graphs path/of/graph nb_walker  rule1:coeff rule2:coeff\n \
         check out the docu directory for more informations\n");
         exit(0);
     }
     if(argc < 4){ //checks that the number of args is ok
-        fprintf(stderr, "1usage : ./walking_on_graphs path/of/graph nb_walker nb_iterations rule1:coeff rule2:coeff\n");
+        fprintf(stderr, "1usage : ./walking_on_graphs path/of/graph nb_walker  rule1:coeff rule2:coeff\n");
         return ERRFLAG_NOFILE;
     }
     
-    uint8_t optset = dumpset + loadset + fluxset; //number of args to remove 
+    uint8_t optset =  loadset + fluxset; //number of args to remove 
 
     char * path = argv[1+optset]; 
     char * end=argv[2+optset];
 
+    char * trace_name = argv[3+optset];
+
     //parses number of walkers
     double walker_coeff=  (double) strtod( argv[2+optset], &end );
     if(end == argv[2+optset]){
-        fprintf(stderr, "2usage : ./walking_on_graphs path/of/graph nb_walker nb_iterations rule1:coeff rule2:coeff\n");
+        fprintf(stderr, "2usage : ./walking_on_graphs path/of/graph nb_walker  rule1:coeff rule2:coeff\n");
         return ERRFLAG_INVALID_ARG;
     }
 
-    //parses number of iterations
-    end= argv[3+optset];
-    uint32_t iteration_num = (uint32_t ) strtol( argv[3+optset], &end , 10);
- 
-    if(end== argv[3+optset]){
-        fprintf(stderr, "3usage : ./walking_on_graphs path/of/graph nb_walker nb_iterations rule1:coeff rule2:coeff\n");     
-        return ERRFLAG_INVALID_ARG;
-    }
+   
 
     if(!fluxset){
-        flux_dump_start= iteration_num - 10;   
+        flux_dump_start= 500  ;
     }
     //init timer
     time_t timer;
@@ -125,15 +114,11 @@ int main(int argc , char ** argv){
         if(failure){report_err("in main load_warray call", failure); exit(failure);}       
     }
 
-    if(!dumpset){
-        failure=iterate_ntimes(&gtable, &tactics, iteration_num);
-        if(failure){report_err("in main iterate_ntimes call", failure); exit(failure);}
-    }else{
+    
+    failure=iterate_while_groups(&gtable, &tactics,trace_name, flux_dump_start);
+    if(failure){report_err("in main iterate_ntimes_dump call", failure); exit(failure);}
 
-        failure=iterate_ntimes_dump(&gtable, &tactics, iteration_num, trace_name, flux_dump_start);
-        if(failure){report_err("in main iterate_ntimes_dump call", failure); exit(failure);}
-
-    }
+    
 
     //frees memory
     freeGraphTab(&gtable);
