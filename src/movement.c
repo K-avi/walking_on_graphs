@@ -184,7 +184,7 @@ uint8_t iterate_ntimes_dump( GraphTable * gtable, Tactics * tactics, uint32_t it
 //tested outputs; ok
 //updated ;  tested ;  ok
 
-uint8_t iterate_while_groups( GraphTable * gtable, Tactics * tactics,  char * trace_name, uint16_t flux_start){
+uint8_t iterate_while_groups( GraphTable * gtable, Tactics * tactics, uint32_t threshold_size , char * trace_name, uint16_t flux_start){
     /*
     O(infinity, litterally infinity )
     clone of iterate_ntimes_dump that won't stop while there's more than a group 
@@ -241,7 +241,7 @@ uint8_t iterate_while_groups( GraphTable * gtable, Tactics * tactics,  char * tr
         failure= prepare_ite(gtable);
         if(failure){ report_err("iterate_while_groups prepare_it call", failure); return failure;}
 
-        failure = one_gp_check(gtable, &one_gp);
+        failure = size_gp_check(gtable, &one_gp,threshold_size);
         if(failure){ report_err("iterate_while_groups one_gp_check call", failure); return failure;}
 
 

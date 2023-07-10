@@ -63,11 +63,17 @@ int main(int argc , char ** argv){
     char * path = argv[1+optset]; 
     char * end=argv[2+optset];
 
-    char * trace_name = argv[3+optset];
+    char * trace_name = argv[4+optset];
 
     //parses number of walkers
     double walker_coeff=  (double) strtod( argv[2+optset], &end );
     if(end == argv[2+optset]){
+        fprintf(stderr, "2usage : ./walking_on_graphs path/of/graph nb_walker  rule1:coeff rule2:coeff\n");
+        return ERRFLAG_INVALID_ARG;
+    }
+
+    uint32_t stop_condition =  (double) strtod( argv[3+optset], &end );
+    if(end == argv[3+optset]){
         fprintf(stderr, "2usage : ./walking_on_graphs path/of/graph nb_walker  rule1:coeff rule2:coeff\n");
         return ERRFLAG_INVALID_ARG;
     }
@@ -90,8 +96,8 @@ int main(int argc , char ** argv){
     //tries to parse the tactics arg if they are present 
     //if the program is called without it ; simply uses the rand rule
 
-    if(argc>4){
-        failure=parse_args(&tactics, argc-4-optset, (argv+4+optset), &prop_flag);
+    if(argc>5){
+        failure=parse_args(&tactics, argc-5-optset, (argv+5+optset), &prop_flag);
         if(failure){ report_err("in main parse args 1 call", failure); exit(failure);}
     }else{//hmmm
         failure = parse_args(&tactics, 0, NULL, &prop_flag);
@@ -115,7 +121,7 @@ int main(int argc , char ** argv){
     }
 
     
-    failure=iterate_while_groups(&gtable, &tactics,trace_name, flux_dump_start);
+    failure=iterate_while_groups(&gtable, &tactics,stop_condition,trace_name, flux_dump_start);
     if(failure){report_err("in main iterate_ntimes_dump call", failure); exit(failure);}
 
     

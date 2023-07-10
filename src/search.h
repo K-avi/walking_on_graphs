@@ -21,7 +21,7 @@ typedef struct dyn_arr{  //generic uint32 dynamic array
 typedef s_dynamic_array GROUP_ARR; //the gp array / stack are typedefs of dynamic arrays
 typedef s_dynamic_array S_STACK;
 
-uint8_t one_gp_check( GraphTable * gt, bool * check );
+bool size_gp_check( GraphTable * gt, bool * check ,  uint32_t threshold_size);
 
 #define init_gp_arr(arr) (init_dyn_arr((arr), GA_SIZE_DEF , GA_TYPE))
 #define free_gp_arr(arr) (free_dyn_arr((arr)))

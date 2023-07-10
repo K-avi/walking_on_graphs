@@ -59,9 +59,9 @@ static uint8_t app_dyn_arr( GROUP_ARR * arr, uint32_t value , uint8_t type){
     }
 
     if(arr->cur_in == arr->size ){
-        uint32_t old_capa = arr->size ; 
+       
         arr->size = GROW_CAPACITY(arr->size);
-        arr->elem = GROW_ARRAY(uint32_t, arr->elem, old_capa, arr->size);
+        arr->elem = realloc(arr->elem, arr->size * sizeof(uint32_t));
         if(!arr->elem){
             if(type== GA_TYPE){report_err("app_dyn_arr", GA_REALLOC); return GA_REALLOC;
             }else {report_err("app_dyn_arr", STACK_REALLOC); return STACK_REALLOC;}
@@ -88,7 +88,7 @@ static uint8_t pop_dyn_arr(S_STACK * arr , uint32_t * ret){
 static uint8_t get_group_nodes(GraphTable * gt, GROUP_ARR * arr, uint32_t * sum){
     /*
     given a graph table returns the nodes that are in 
-    the same "group" a group is defined by a set 
+    the biggest "group" of the graph a group is defined by a set 
     of connected nodes from gt that each contain at 
     least one walker.
     the GROUP_ARR pointer given should store the 
@@ -98,49 +98,93 @@ static uint8_t get_group_nodes(GraphTable * gt, GROUP_ARR * arr, uint32_t * sum)
     if(!arr){report_err("get_group_nodes", GA_NULL);return GA_NULL;}
 
     int64_t start = -1; 
-    for(uint32_t i = 0 ; i<gt->wkcn->size; i++){
-        if(gt->wkcn->cur_num[i]!=0){
-            start = i; 
-            break;
-        }
-    }
-    if(start == -1){report_err("get_group_nodes", GA_NOWK);return GA_NOWK;}
 
     S_STACK stack; 
     uint8_t failure = init_stack(&stack);
     if(failure){report_err("get_group_nodes", failure);return failure;}
+    uint32_t max = 0, cur = 0; 
 
-    stack_darr(&stack, start);
-    gt->seen_array[start]=1;
+    GROUP_ARR cur_ga, max_ga; 
+    
+    failure = init_gp_arr(&max_ga);
+    if(failure){ report_err("get_group_nodes", failure); return failure;}
 
-    while(stack.cur_in){
+    failure = init_gp_arr(&cur_ga);
+    if(failure){ report_err("get_group_nodes", failure); return failure;}
 
-        uint32_t cur_node;
-        uint8_t failure = pop_stack(&stack, &cur_node);
-        if(failure){ report_err("get_group_nodes", failure); return failure;}
-    printf("cur visiting %u %u ", cur_node, gt->wkcn->cur_num[cur_node]);
-        *sum+= gt->wkcn->cur_num[cur_node];
-        app_ga_arr(arr, cur_node);
+    for(uint32_t i = 0 ; i<gt->wkcn->size; i++){
+        
+        if(gt->wkcn->cur_num[i]!=0 && !gt->seen_array[i]){
+            start = i; 
 
-        for(uint32_t i =0 ; i < gt->entries[cur_node].neighboor_num; i++){//appends neighbors not already 
-        //seen AND with walkers to the stack
-            
-            uint32_t neighbor_index = (gt->entries[cur_node].first_neighboor_ref+i)->node_index;
-            printf("index : %u ", neighbor_index);
-            if(gt->wkcn->cur_num[neighbor_index] && !gt->seen_array[neighbor_index]){ 
-                printf("seen %u\n",neighbor_index );
-                gt->seen_array[neighbor_index]=1; 
-                stack_darr(&stack, neighbor_index);
+            stack_darr(&stack, start);
+            gt->seen_array[start]=1;
+            cur = 0;
+
+            while(stack.cur_in){
+
+                uint32_t cur_node;
+                failure = pop_stack(&stack, &cur_node);
+                if(failure){ report_err("get_group_nodes", failure); return failure;}
+
+                cur+= gt->wkcn->cur_num[cur_node];
+                app_ga_arr(&cur_ga, cur_node);
+
+                for(uint32_t i =0 ; i < gt->entries[cur_node].neighboor_num; i++){//appends neighbors not already 
+                //seen AND with walkers to the stack
+                    
+                    uint32_t neighbor_index = (gt->entries[cur_node].first_neighboor_ref+i)->node_index;
+                  
+                    if(gt->wkcn->cur_num[neighbor_index] && !gt->seen_array[neighbor_index]){ 
+                      
+                        gt->seen_array[neighbor_index]=1; 
+                        stack_darr(&stack, neighbor_index);
+                    }
+                }
             }
+
+
+           if(cur > max) {
+                
+                if(cur_ga.size > max_ga.size){ //copies max group to max_ga
+                    if(max_ga.elem) free(max_ga.elem); 
+                    max_ga.elem = calloc(cur_ga.size, sizeof(uint32_t));
+                    max_ga.size = cur_ga.size;
+                    max_ga.cur_in = cur_ga.cur_in;
+
+                    memccpy(max_ga.elem, cur_ga.elem, sizeof(uint32_t)* cur_ga.cur_in, max_ga.size);
+                }
+                //sets max to it's new value 
+                max = cur; 
+           }
+           //"flushes" cur group
+           cur_ga.cur_in = 0 ;
         }
     }
+    if(start == -1){report_err("get_group_nodes", GA_NOWK);return GA_NOWK;}
+
+    *sum = max;
+
+    //ugly af tbh 
+    if(arr->elem) free(arr->elem);
+    arr->cur_in=0; 
+    arr->size = max_ga.size;
+    arr->elem = calloc(max_ga.size , sizeof(uint32_t));
+
+    memccpy(arr->elem, max_ga.elem, sizeof(uint32_t)* max_ga.cur_in, arr->size);
+    arr->cur_in = max_ga.cur_in;
+
+    
     free_stack(&stack);
+    free_gp_arr(&cur_ga); 
+    free_gp_arr(&max_ga);
+
     return GA_OK;
 }//not tested; 
 //error prone  
 
 
-uint8_t one_gp_check( GraphTable * gt, bool * check ){
+bool size_gp_check( GraphTable * gt, bool * check, uint32_t threshold_size ){
     /*
     checks wether every Walker in the graphs 
     passed as argument are in the same group
@@ -165,8 +209,8 @@ uint8_t one_gp_check( GraphTable * gt, bool * check ){
     //the number of walkers in the graph
     get_group_nodes(gt, &ga , &sum);
     //actually I'm not sure I don't even NEED ga but whatever
-    printf("sum is %u warr size %u\n",sum, gt->warray->size);
-    *check = (sum >= gt->warray->size);
+    
+    *check = (sum >= threshold_size);
 
     free_gp_arr(&ga);
     return GA_OK;
